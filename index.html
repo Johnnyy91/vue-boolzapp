@@ -17,8 +17,12 @@
 </head>
 
  <body>
+
+<!-- WEB-APP -->
     <div class="container">
         <div id="webApp" class="web-app">
+
+            <!-- PART LEFT -->
             <aside>
                 <div class="head flex">
                     <div class="profile flex">
@@ -32,7 +36,7 @@
                     </div> 
                 </div>
                 <div class="notifications flex">
-                    <div><i class="fa-solid fa-bell-slash"></i></div>
+                    <div class="bell"><i class="fa-solid fa-bell-slash"></i></div>
                     <div>
                         <p>Ricevi notifiche di nuovi messaggi</p>
                         <p><a href="#">Attiva notifiche desktop</a></p>
@@ -44,33 +48,32 @@
                 </div>
                 <div class="contact">
                     <ul>
-                        <li v-for="(contact , i) in contacts">
+                        <li class="list-contact" v-for="(contact , i) in contacts">
                          <div class="flex space-between">
-                            <div>
-                                <img :src="contacts[i].avatar" alt="">
-                                {{contacts[i].name}}
+                            <div class="flex">
+                                <img :src="contacts[i].avatar" alt="contacts[i].avatar">
+                                <div>
+                                <p>{{contacts[i].name}}</p>
+                                <p>Ultimo messaggio inviato</p></div>
                             </div>
                             <div>
-                                
+                                <p>12:00</p>
                             </div>
-                            
                          </div>
                         </li>
                     </ul>
                 </div>
             </aside>
+
+            <!-- PART RIGHT -->
             <main>
                 <header></header>
                 <div class="content">
                     <ul>
                         <li v-for="(message , i) in contacts[activeProfile].messages">
-                            
-                               
-                                <div>
-                                    {{message.message}}
-                                </div>
-                    
-                            
+                            <div>
+                               {{message.message}}
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -78,5 +81,6 @@
             </main>
         </div>
     </div>
+
  </body>
 </html>

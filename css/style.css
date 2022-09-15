@@ -1,3 +1,5 @@
+/* GENERAL */
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -21,9 +23,13 @@ img {
     flex-direction: column;
 }
 
+/* BODY */
+
 body {
     font-family: sans-serif;
 }
+
+/* WEB-APP */
 
 .container{
     background-color: green;
@@ -38,7 +44,8 @@ body {
     padding: 50px;
 }
 
-/*ASIDE*/
+/* PART LEFT */
+
 aside {
     flex-basis: 450px;
     background-color: hsl(0deg 0% 100%);
@@ -59,8 +66,37 @@ aside {
     flex-shrink: 0;
     height: 50px;
     justify-content: space-between;
+    background-color: hsl(0deg 0% 92%);
 }
 
+.icon span{
+    color: hsl(0deg 0% 69%);
+    padding: 10px;
+}
+
+.notifications{
+    background-color: hsl(199deg 95% 77%);
+    padding: 20px 0;
+}
+
+.bell{
+    color: hsl(199deg 95% 77%);
+    border-radius: 20px;
+    background-color: white;
+    height: 20%;
+
+}
+
+.list-contact{
+    padding: 20px 0;
+}
+
+.search{
+    padding: 20px 0;
+}
+
+
+/* PART RIGHT */
 main {
     flex-grow: 1;
     display: flex;
@@ -79,8 +115,6 @@ header {
     overflow-y: auto;
     background-image: url(../img/mine.jpg);
 }
-
-
 
 footer {
     height: 50px;
