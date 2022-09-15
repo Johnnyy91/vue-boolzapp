@@ -36,8 +36,10 @@
                     </div> 
                 </div>
                 <div class="notifications flex">
-                    <div class="bell"><i class="fa-solid fa-bell-slash"></i></div>
-                    <div>
+                    <div class="bell">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div class="attivation-notifications">
                         <p>Ricevi notifiche di nuovi messaggi</p>
                         <p><a href="#">Attiva notifiche desktop</a></p>
                     </div>
@@ -50,7 +52,7 @@
                     <ul>
                         <li class="list-contact" v-for="(contact , i) in contacts">
                          <div class="flex space-between">
-                            <div class="flex">
+                            <div class="card flex">
                                 <img :src="contacts[i].avatar" alt="contacts[i].avatar">
                                 <div>
                                 <p>{{contacts[i].name}}</p>
@@ -67,7 +69,14 @@
 
             <!-- PART RIGHT -->
             <main>
-                <header></header>
+                <header class="flex space-between">
+                    <div></div>
+                    <div class="head-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </header>
                 <div class="content">
                     <ul>
                         <li v-for="(message , i) in contacts[activeProfile].messages">
@@ -77,7 +86,17 @@
                         </li>
                     </ul>
                 </div>
-                <footer></footer>
+                <footer class="flex space-between">
+                    <div>
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Scrivi un messaggio">
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                </footer>
             </main>
         </div>
     </div>
