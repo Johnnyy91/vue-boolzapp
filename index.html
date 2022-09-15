@@ -6,20 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="js/script.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.10/vue.min.js"
         integrity="sha512-H8u5mlZT1FD7MRlnUsODppkKyk+VEiCmncej8yZW1k/wUT90OQon0F9DSf/2Qh+7L/5UHd+xTLrMszjHEZc2BA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Web App</title>
+    <title>VUE-BOOLZAPP</title>
 </head>
 
  <body>
     <div class="container">
-        <div class="web-app">
-            <aside></aside>
+        <div id="webApp" class="web-app">
+            <aside>
+                <div class="head flex">
+                    <div class="profile flex">
+                        <img src="img/avatar_io.jpg" alt="avatar_1">
+                        <span>Sofia</span>
+                    </div>
+                    <div class="icon">
+                        <span><i class="fa-solid fa-circle-notch"></i></span>
+                        <span><i class="fa-solid fa-message"></i></span>
+                        <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                    </div> 
+                </div>
+                <div class="notifications flex">
+                    <div><i class="fa-solid fa-bell-slash"></i></div>
+                    <div>
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <p><a href="#">Attiva notifiche desktop</a></p>
+                    </div>
+                </div>
+                <div class="search">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+                <div class="contact">
+                    <ul>
+                        <li v-for="(contact , i) in contacts">
+                         <div class="flex space-between">
+                            <div>
+                                <img :src="contacts[i].avatar" alt="">
+                                {{contacts[i].name}}
+                            </div>
+                            <div>
+                                
+                            </div>
+                            
+                         </div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
             <main>
                 <header></header>
                 <div class="content">
+                    <ul>
+                        <li v-for="(message , i) in contacts[activeProfile].messages">
+                            
+                               
+                                <div>
+                                    {{message.message}}
+                                </div>
+                    
+                            
+                        </li>
+                    </ul>
                 </div>
                 <footer></footer>
             </main>

@@ -5,6 +5,22 @@
 
 }
 
+img {
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.column{
+    flex-direction: column;
+}
+
 body {
     font-family: sans-serif;
 }
@@ -22,7 +38,7 @@ body {
     padding: 50px;
 }
 
-
+/*ASIDE*/
 aside {
     flex-basis: 450px;
     background-color: hsl(0deg 0% 100%);
@@ -31,6 +47,18 @@ aside {
     overflow-y: auto;
     border: 0.5px solid black;
     z-index: 0;
+}
+
+.contact img{
+    width: 15%;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.head {
+    flex-shrink: 0;
+    height: 50px;
+    justify-content: space-between;
 }
 
 main {
@@ -52,9 +80,7 @@ header {
     background-image: url(../img/mine.jpg);
 }
 
-img{
-    width: 100%;
-}
+
 
 footer {
     height: 50px;
