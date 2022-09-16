@@ -173,5 +173,12 @@ const app = new Vue(
             contacts,
             activeProfile: 0,
             
+        },
+        methods:{
+            setActiveIndex(i){
+                this.activeProfile = i;
+                console.log(this.setActiveIndex);
+            }
         }
     });
+

@@ -50,7 +50,11 @@
                 </div>
                 <div class="contact">
                     <ul>
-                        <li class="list-contact" v-for="(contact , i) in contacts">
+                        <li 
+                        class="list-contact" 
+                        v-for="(contact , i) in contacts"
+                        :class="{active : i === activeProfile}"
+                        @click="setActiveIndex(i)">
                          <div class="flex space-between">
                             <div class="card flex">
                                 <img :src="contacts[i].avatar" alt="contacts[i].avatar">
@@ -70,7 +74,12 @@
             <!-- PART RIGHT -->
             <main>
                 <header class="flex space-between">
-                    <div></div>
+                    <div class="contact">
+                        <img 
+                        class="contact"
+                        :src="contacts[activeProfile].avatar"
+                        :alt="contacts[activeProfile].name">
+                    </div>
                     <div class="head-icon">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <i class="fa-solid fa-paperclip"></i>
