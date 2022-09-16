@@ -82,11 +82,13 @@
             <main>
                 <header class="flex space-between">
                     <div class="contact">
+                        <div class="flex align-items">
                         <img 
                         class="contact"
                         :src="contacts[activeProfile].avatar"
                         :alt="contacts[activeProfile].name">
                         <p>{{contacts[activeProfile].name}}</p>
+                        </div>
                     </div>
                     <div class="head-icon">
                         <i class="fa-solid fa-magnifying-glass"></i>

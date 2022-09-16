@@ -177,21 +177,25 @@ const app = new Vue(
             
         },
         methods:{
+            
             setActiveIndex(i){
                 this.activeProfile = i;
                 console.log(this.setActiveIndex);
             },
+
             addNewText(){
                 const textInsert = {message:this.newText.trim()};
                 this.contacts[this.activeProfile].messages.push(textInsert);
                 this.newText = '';
                 this.intervalAnswer();
             },
+
             intervalAnswer(){
                 setTimeout(()=>{
                 const answer = {message:'ok va bene', status:'received'}
                 this.contacts[this.activeProfile].messages.push(answer);
             },1000)},
+
             insertName(){
                 const word = this.research;
                 this.contacts.forEach((element)=>{
