@@ -174,7 +174,6 @@ const app = new Vue(
             activeProfile: 0,
             newText : '',
             research:'',
-            
         },
         methods:{
             
